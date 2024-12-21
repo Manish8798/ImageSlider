@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct ImageSliderApp: App {
+    @StateObject var viewModel = ImageViewModel()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(viewModel)
         }
     }
 }

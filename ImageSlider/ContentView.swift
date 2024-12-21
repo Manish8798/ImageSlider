@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var viewModel : ImageViewModel
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            StackedSlider(journals: viewModel.photoModelResponse ?? [], initialIndex: 0)
         }
         .padding()
+        .onAppear{
+            Task {
+                await viewModel.getPhotos()
+            }
+        }
     }
 }
 
