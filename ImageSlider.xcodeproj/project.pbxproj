@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		137324932D1B13B000CC4609 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 137324922D1B13B000CC4609 /* SDWebImage */; };
+		137324962D1B16BF00CC4609 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 137324952D1B16BF00CC4609 /* Kingfisher */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		134FD5152D149129008193ED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				137324962D1B16BF00CC4609 /* Kingfisher in Frameworks */,
+				137324932D1B13B000CC4609 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 			);
 			name = ImageSlider;
 			packageProductDependencies = (
+				137324922D1B13B000CC4609 /* SDWebImage */,
+				137324952D1B16BF00CC4609 /* Kingfisher */,
 			);
 			productName = ImageSlider;
 			productReference = 134FD5032D149128008193ED /* ImageSlider.app */;
@@ -195,6 +204,10 @@
 			);
 			mainGroup = 134FD4FA2D149128008193ED;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				137324912D1B13AF00CC4609 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				137324942D1B16BF00CC4609 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 134FD5042D149128008193ED /* Products */;
 			projectDirPath = "";
@@ -591,6 +604,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		137324912D1B13AF00CC4609 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.20.0;
+			};
+		};
+		137324942D1B16BF00CC4609 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		137324922D1B13B000CC4609 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 137324912D1B13AF00CC4609 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		137324952D1B16BF00CC4609 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 137324942D1B16BF00CC4609 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 134FD4FB2D149128008193ED /* Project object */;
 }
